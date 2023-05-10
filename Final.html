@@ -1,1 +1,12 @@
-
+ for (var i = 0; i < xPositions.length; i++) 
+        {
+            noStroke(); // no outline for the raindrops
+            fill(starColor[i]);
+            ellipse(xPositions[i], yPositions[i], 5, 5);
+            yPositions[i] += starSpeed; //falling motion
+        if (yPositions[i]>410 )// Condition to send it to the top 
+        {     
+            yPositions[i]=round(random(-100,0));
+            xPositions[i]=round(random(10,390));
+        }
+        }
